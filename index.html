@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Code Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Price Code Manager</h1>
+        <div>
+            <button onclick="showCreateCodeForm()">Create Code</button>
+            <button onclick="showRetrieveCodeForm()">Retrieve Code</button>
+        </div>
+
+        <div id="formContainer" class="form-container">
+            <!-- Create Code Form -->
+            <div id="createCodeForm" class="form hidden">
+                <h2>Create Code</h2>
+                <input type="number" id="priceInput" placeholder="Enter Product Price" required>
+                <button onclick="createCode()">Generate Code</button>
+                <p id="generatedCode"></p>
+            </div>
+
+            <!-- Retrieve Code Form -->
+            <div id="retrieveCodeForm" class="form hidden">
+                <h2>Retrieve Code</h2>
+                <input type="text" id="codeInput" placeholder="Enter Unique Code" required>
+                <button onclick="retrievePrice()">Get Price</button>
+                <p id="retrievedPrice"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
